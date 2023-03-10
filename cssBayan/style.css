@@ -127,3 +127,21 @@ li input:checked ~ label img {
     max-width: 100%;
   }
 }
+
+
+/* mobile */
+@media (max-width: 320px) {
+  header,
+  main {
+    max-width: 300px;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
