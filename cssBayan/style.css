@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+img {
+  align-self: center;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 10px 0;
+  border-top: 1px solid lightgray;
+}
+
+li:hover,
+li:hover h2,
+li:hover label {
+  cursor: pointer;
+}
+
+label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("svg/plus.svg") no-repeat center;
+  background-size: 50%;
+  right: 0;
+  top: 0;
+  transition-duration: 0.5s;
+  transform: scale(0) rotate(0);
+}
+
+ul:hover label:after {
+  transform: scale(1) rotate(0);
+}
+
+input:checked ~ label:hover:after {
+  transform: scale(1) rotate(45deg);
+}
+
+li:hover label:after {
+  transform: scale(1) rotate(45deg);
+}
+
+li > input ~ label h2 {
+  color: mediumblue;
+}
+
+li input:checked ~ label h2,
+ul:hover li > input ~ label h2 {
+  color: black;
+}
+
+li > input ~ label img {
+  max-width: 0;
+}
+
+li:hover > input ~ label img {
+  max-width: 400px;
+  transition-duration: 1s;
+  transition-delay: 0.1s;
+}
+
+li input:checked ~ label img {
+  max-width: 400px;
+}
+
+h2 {
+  display: inline;
+}
+
+
