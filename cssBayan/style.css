@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 header,
@@ -12,6 +13,14 @@ main {
 
 h1, h2 {
   margin: 0;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 22px;
 }
 
 img {
@@ -92,9 +101,4 @@ li:hover > input ~ label img {
 li input:checked ~ label img {
   max-width: 400px;
 }
-
-h2 {
-  display: inline;
-}
-
 
