@@ -4,136 +4,129 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header,
-main {
+.header,
+.main-container {
   width: 80%;
   margin: 0 auto;
   padding: 1vw 0;
 }
 
-h1, h2 {
+.header__title, .card__title {
   margin: 0;
 }
 
-h1 {
+.header__title {
   font-size: 4em;
 }
 
-h2 {
+.card__title {
   font-size: 1.5em;
-  padding-right: 2vw;
+  padding-right: 1.5em;;
 }
 
-img {
+.card__img {
   align-self: center;
   margin-top: 1vw;
 }
 
-input[type=radio] {
+.card__check {
   display: none;
 }
 
-ul {
+.card-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-li {
+.card {
   padding: 1vw 0;
   border-top: 0.1vw solid lightgray;
 }
 
-li:hover,
-li:hover h2,
-li:hover label {
+.card:hover,
+.card:hover .card__title,
+.card:hover .card__content {
   cursor: pointer;
 }
 
-label {
-  position: relative;
+.card__header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
-label:after {
-  content: "";
-  position: absolute;
-  width: 2vw;
-  height: 2vw;
-  background: url("svg/plus.svg") no-repeat center;
-  background-size: 100%;
-  right: 0;
-  top: 0;
+.button {
+  width: 1.5em;
   transition-duration: 0.5s;
   transform: scale(0) rotate(0);
 }
 
-ul:hover label:after {
+.card-list:hover .button {
   transform: scale(1) rotate(0);
 }
 
-input:checked ~ label:hover:after {
+.card-list:hover .card__check:checked ~ .card__content .button,
+.card:hover .button {
   transform: scale(1) rotate(45deg);
 }
 
-li:hover label:after {
-  transform: scale(1) rotate(45deg);
+.card__content {
+  display: flex;
+  flex-direction: column;
 }
 
-li > input ~ label h2 {
+.card__title {
   color: mediumblue;
 }
 
-li input:checked ~ label h2,
-ul:hover li > input ~ label h2 {
+.card__check:checked ~ .card__content .card__title,
+.card-list:hover .card__title {
   color: black;
 }
 
-li > input ~ label img {
+.card__img {
   max-width: 0;
 }
 
-li:hover > input ~ label img {
-  width: 50%;
-  max-width: 50%;
+.card:hover > .card__check ~ .card__content .card__img {
+  width: 60%;
+  max-width: 60%;
   transition-duration: 1s;
   transition-delay: 0.1s;
 }
 
-li input:checked ~ label img {
-  width: 50%;
-  max-width: 50%;
+.card__check:checked ~ .card__content .card__img {
+  width: 60%;
+  max-width: 60%;
 }
 
 /* tablet */
 @media (max-width: 820px) {
-  header,
-  main {
+  .header,
+  .main-container {
     width: 90%;
     padding: 1vw 0;
   }
 
-  h1 {
+  .header__title {
     font-size: 4.5em;
   }
 
-  h2 {
+  .card__title {
     font-size: 2em;
-    padding-right: 3.5vw;
+    padding-right: 2em;
   }
 
-  label:after {
-    width: 3.5vw;
-    height: 3.5vw;
+  .button {
+    width: 2em;
   }
 
-  li {
+  .card {
     border-width: 0.3vw;
   }
 
-  li:hover > input ~ label img,
-  li input:checked ~ label img {
+  .card:hover > .card__check ~ .card__content .card__img,
+  .card__check:checked ~ .card__content .card__img {
     width: 90%;
     max-width: 100%;
   }
@@ -142,32 +135,31 @@ li input:checked ~ label img {
 
 /* mobile */
 @media (max-width: 320px) {
-  header,
-  main {
+  .header,
+  .main-container {
     width: 95%;
     padding: 4vw 0;
   }
 
-  h1 {
+  .header__title {
     font-size: 3em;
   }
 
-  h2 {
+  .card__title {
     font-size: 1.8em;
-    padding-right: 5vw;
+    padding-right: 1.8em;
   }
 
-  label:after {
-    width: 5vw;
-    height: 5vw;
+  .button {
+    width: 1.8em;
   }
 
-  li {
+  .card {
     border-width: 0.5vw;
   }
 
-  li:hover > input ~ label img,
-  li input:checked ~ label img {
+  .card:hover > .card__check ~ .card__content .card__img,
+  .card__check:checked ~ .card__content .card__img {
     width: 100%;
     max-width: 100%;
   }

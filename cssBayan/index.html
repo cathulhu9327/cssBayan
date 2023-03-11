@@ -10,44 +10,59 @@
   <title>CSS Bayan</title>
 </head>
 <body>
-<header>
-  <h1>CSS Bayan</h1>
+<header class="header">
+  <h1 class="header__title">CSS Bayan</h1>
 </header>
-<main>
-  <ul>
-    <li>
-      <input type="radio" name="bayan" id="meme1" checked>
-      <label for="meme1">
-        <h2>You need to check announcements minimum one time a day</h2>
-        <img src="pictures/meme1.jpg" alt="You need to check announcements minimum one time a day">
+<main class="main-container">
+  <ul class="card-list">
+    <li class="card">
+      <input type="radio" name="bayan" id="meme1" class="card__check" checked>
+      <label for="meme1" class="card__content">
+        <span class="card__header">
+          <h2 class="card__title">You need to check announcements minimum one time a day</h2>
+          <img src="svg/plus.svg" alt="show/hide" class="button">
+        </span>
+        <img src="pictures/meme1.jpg" alt="You need to check announcements minimum one time a day" class="card__img">
       </label>
     </li>
-    <li>
-      <input type="radio" name="bayan" id="meme2">
-      <label for="meme2">
-        <h2>Why can't you just be a normal?</h2>
-        <img src="pictures/meme2.jpg" alt="Why cant't you just be a normal?">
+    <li class="card">
+      <input type="radio" name="bayan" id="meme2" class="card__check">
+      <label for="meme2" class="card__content">
+        <span class="card__header">
+          <h2 class="card__title">Why can't you just be a normal?</h2>
+          <img src="svg/plus.svg" alt="show/hide" class="button">
+        </span>
+        <img src="pictures/meme2.jpg" alt="Why cant't you just be a normal?" class="card__img">
       </label>
     </li>
-    <li>
-      <input type="radio" name="bayan" id="meme3">
-      <label for="meme3">
-        <h2>Make a submit task at the very beginning</h2>
-        <img src="pictures/meme3.jpg" alt="Make a submit task at the very beginning">
+    <li class="card">
+      <input type="radio" name="bayan" id="meme3" class="card__check">
+      <label for="meme3" class="card__content">
+        <span class="card__header">
+          <h2 class="card__title">Make a submit task at the very beginning</h2>
+          <img src="svg/plus.svg" alt="show/hide" class="button">
+        </span>
+        <img src="pictures/meme3.jpg" alt="Make a submit task at the very beginning" class="card__img">
       </label>
     </li>
-    <li>
-      <input type="radio" name="bayan" id="meme4">
-      <label for="meme4">
-        <h2>You will find a job after course. Necessarily</h2>
-        <img src="pictures/meme4.jpg" alt="You will find a job after course. Necessarily">
+    <li class="card">
+      <input type="radio" name="bayan" id="meme4" class="card__check">
+      <label for="meme4" class="card__content">
+        <span class="card__header">
+          <h2 class="card__title">You will find a job after course. Necessarily</h2>
+          <img src="svg/plus.svg" alt="show/hide" class="button">
+        </span>
+        <img src="pictures/meme4.jpg" alt="You will find a job after course. Necessarily" class="card__img">
       </label>
     </li>
-    <li>
-      <input type="radio" name="bayan" id="meme5">
-      <label for="meme5">
-        <h2>Someone: college years are the best time in life</h2>
-        <img src="pictures/meme5.jpg" alt="Someone: college years are the best time in life">
+    <li class="card">
+      <input type="radio" name="bayan" id="meme5" class="card__check">
+      <label for="meme5" class="card__content">
+        <span class="card__header">
+          <h2 class="card__title">Someone: college years are the best time in life</h2>
+          <img src="svg/plus.svg" alt="show/hide" class="button">
+        </span>
+        <img src="pictures/meme5.jpg" alt="Someone: college years are the best time in life" class="card__img">
       </label>
     </li>
   </ul>
