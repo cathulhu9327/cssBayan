@@ -25,6 +25,7 @@ h2 {
 
 img {
   align-self: center;
+  margin-top: 5px;
 }
 
 input[type=radio] {
